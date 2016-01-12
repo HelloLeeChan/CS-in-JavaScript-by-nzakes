@@ -11,30 +11,30 @@
 打算每个星期翻一篇，希望能在春节前做完。
 
 
-文章列表[Computer Science](https://www.nczonline.net/blog/tag/computer-science/)
-Computer science in JavaScript: Quicksort
-Nov 27, 2012
-Computer science in JavaScript: Merge sort
-Oct 2, 2012
-Computer science in JavaScript: Insertion sort
-Sep 17, 2012
-Computer science in JavaScript: Base64 encoding
-Dec 8, 2009
-Computer science in JavaScript: Selection sort
-Sep 8, 2009
-Computer science in JavaScript: Binary search
-Sep 1, 2009
-Computer science in JavaScript: Credit card number validation
-Aug 4, 2009
-Computer science in JavaScript: Binary search tree, Part 2
-Jun 16, 2009
-Computer science in JavaScript: Binary search tree, Part 1
-Jun 9, 2009
-Computer science in JavaScript: Bubble sort
-May 26, 2009
-Computer science in JavaScript: Doubly-linked lists
-Apr 21, 2009
-Computer science in JavaScript: Linked list
-Apr 13, 2009
+文章列表[Computer Science](https://www.nczonline.net/blog/tag/computer-science/) <br/>
+Computer science in JavaScript: Quicksort<br/>
+Nov 27, 2012<br/>
+Computer science in JavaScript: Merge sort<br/>
+Oct 2, 2012<br/>
+Computer science in JavaScript: Insertion sort<br/>
+Sep 17, 2012<br/>
+Computer science in JavaScript: Base64 encoding<br/>
+Dec 8, 2009<br/>
+Computer science in JavaScript: Selection sort<br/>
+Sep 8, 2009<br/>
+Computer science in JavaScript: Binary search<br/>
+Sep 1, 2009<br/>
+Computer science in JavaScript: Credit card number validation<br/>
+Aug 4, 2009<br/>
+Computer science in JavaScript: Binary search tree, Part 2<br/>
+Jun 16, 2009<br/>
+Computer science in JavaScript: Binary search tree, Part 1<br/>
+Jun 9, 2009<br/>
+Computer science in JavaScript: Bubble sort<br/>
+May 26, 2009<br/>
+Computer science in JavaScript: Doubly-linked lists<br/>
+Apr 21, 2009<br/>
+Computer science in JavaScript: Linked list<br/>
+Apr 13, 2009<br/>
 
 
