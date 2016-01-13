@@ -14,7 +14,7 @@
 文章列表[Computer Science](https://www.nczonline.net/blog/tag/computer-science/) <br/>
 Computer science in JavaScript: Quicksort<br/>
 Nov 27, 2012<br/>
-Computer science in JavaScript: Merge sort<br/>
+[归并排序](https://github.com/HelloLeeChan/CS-in-JavaScript-by-nzakes/blob/master/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.md)<br/>
 Oct 2, 2012<br/>
 Computer science in JavaScript: Insertion sort<br/>
 Sep 17, 2012<br/>
