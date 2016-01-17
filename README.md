@@ -30,7 +30,7 @@ Computer science in JavaScript: Binary search tree, Part 2<br/>
 Jun 16, 2009<br/>
 Computer science in JavaScript: Binary search tree, Part 1<br/>
 Jun 9, 2009<br/>
-Computer science in JavaScript: Bubble sort<br/>
+[Computer science in JavaScript: 冒泡排序](https://github.com/HelloLeeChan/CS-in-JavaScript-by-nzakes/blob/master/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.md)<br/>
 May 26, 2009<br/>
 Computer science in JavaScript: Doubly-linked lists<br/>
 Apr 21, 2009<br/>
