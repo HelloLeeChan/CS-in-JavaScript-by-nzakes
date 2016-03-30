@@ -1,3 +1,6 @@
+原文地址:[Computer science in JavaScript: Binary search tree, Part 1](https://www.nczonline.net/blog/2009/06/09/computer-science-in-javascript-binary-search-tree-part-1/)
+
+
 在数据结构与算法课程中可能被提及最多的就是二叉搜索树了（[Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree)以下简称BST）在本系列文章中它是首次被介绍的典型的数据结构，它具有非线性的插入算法。二叉搜索树有点类似与双重链表（linked list），他们的每个节点都含有数据另外有两个指针（pointer）指向其他节点，两者区别在于节点之间的关系，二叉搜索树的节点指针被称为“左（left）”与“右（right）”，分别表示子节点与当前节点的关系。这样一个节点在Javascript中实现如下：
 
 		var node = {
