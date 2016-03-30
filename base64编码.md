@@ -106,3 +106,104 @@ Base64编码直接作用于底层二进制数据。使用base64编码并不是�
 
     //more code here
     }
+这里使用一个简单的正则来校验是否存在0-255的字符，如果有的话将无法编码且抛出一个错误。
+
+下一步的主要工作就是使用位运算将每个由三组8位数据组成的序列转换成由四组6位数据组成的序列。由于字符串（string）中每个字符都由一个8位数据表示，所以我们可以遍历整个字符串逐个处理其中的字符（character by character）
+
+		function base64Encode(text){
+
+    if (/([^\u0000-\u00ff])/.test(text)){
+        throw new Error("Can't base64 encode non-ASCII characters.");
+    } 
+
+    var digits = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
+        i = 0,
+        cur, prev, byteNum,
+        result=[];      
+
+    while(i < text.length){
+
+        cur = text.charCodeAt(i);
+        byteNum = i % 3;
+
+        switch(byteNum){
+            case 0: //first byte
+                result.push(digits.charAt(cur >> 2));
+                break;
+
+            case 1: //second byte
+                result.push(digits.charAt((prev & 3) << 4 | (cur >> 4)));
+                break;
+
+            case 2: //third byte
+                result.push(digits.charAt((prev & 0x0f) << 2 | (cur >> 6)));
+                result.push(digits.charAt(cur & 0x3f));
+                break;
+        }
+
+        prev = cur;
+        i++;
+    }
+
+    //more code here
+
+    return result.join("");
+	}
+	
+由于每个三字节序列（three-byte sequence）字节的处理有点区别，变量`byteNum`存储当前被处理的三字节字符。当`byteNum`为0时，则为三字节序列中的第一个字节，依次类推，1就是第二个。这里使用了取模运算来计算。
+
+该算法使用两个变量来追溯字符串的遍历过程，`cur`存储（原文是track）当前字符，`prev`存储之前的字符。这是很必要的，因为转成base64编码需要前一个字节的数据。`switch`语句用来选择使用哪种位运算（三种不同的情况罗列在前）。base64的值计算完成后，就在`digits`变量中查找出对应的base64字符。`digits`中顺序存储了素偶有base64可以表示的字符。所以可以把它看成一个查询表，通过`charAt()`找出对应位置。然后`result`数组再被合并(joined)。
+
+最后一步工作则是完成一些字符串的填充：
+
+		function base64Encode(text){
+
+    if (/([^\u0000-\u00ff])/.test(text)){
+        throw new Error("Can't base64 encode non-ASCII characters.");
+    } 
+
+    var digits = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
+        i = 0,
+        cur, prev, byteNum,
+        result=[];      
+
+    while(i < text.length){
+
+        cur = text.charCodeAt(i);
+        byteNum = i % 3;
+
+        switch(byteNum){
+            case 0: //first byte
+                result.push(digits.charAt(cur >> 2));
+                break;
+
+            case 1: //second byte
+                result.push(digits.charAt((prev & 3) << 4 | (cur >> 4)));
+                break;
+
+            case 2: //third byte
+                result.push(digits.charAt((prev & 0x0f) << 2 | (cur >> 6)));
+                result.push(digits.charAt(cur & 0x3f));
+                break;
+        }
+
+        prev = cur;
+        i++;
+    }
+
+    if (byteNum == 0){
+        result.push(digits.charAt((prev & 3) << 4));
+        result.push("==");
+    } else if (byteNum == 1){
+        result.push(digits.charAt((prev & 0x0f) << 2));
+        result.push("=");
+    }
+
+    return result.join("");
+	}
+这一步多亏有了`byteNum`变量，因为while循环结束后如果`byteNum`是2，就意味着恰好完成了所有字节的编码。如果`byteNum`是其他数值，那么就需要填充了（padding）。所以，如果`byteNum`是0，那么就还剩下一个8位字节，转换后就需要左移运算（left-shift）填充4位（8位转换成两个6位）。如果`byteNum`是1，那么就意味着有两个8位字节，那么需要填充2位。
+
+最后，`result`数组合并后返回，就完成了原始字符串的base64编码转换。
+
+###JavaScript解码
+待续……
