@@ -70,13 +70,13 @@
             } else if (value > current.value){
                 current = current.right;
 
-            //values are equal, found it!
+            //值相等，则查找成功
             } else {
                 found = true;
             }
         }
 
-        //only proceed if the node was found
+        //只查找存在的节点
         return found;
     },
 
@@ -100,7 +100,7 @@
                 right: null
             },
 
-            //used to traverse the structure
+            //用于遍历时保存当前节点的变量
             current;
 
         //特殊情况: 空树
@@ -217,4 +217,4 @@
 
 `size()`和`toArray()`都调用了`traverse()`方法并且传入一个函数在每个节点执行。`size()`使用这个执行函数递增长度变量，而`toArray()`使用执行函数把节点值添加进数组中。之后`toString()`方法调用`toArray()`返回一个字符串。
 
-在 part2的文章中，我们将讨论从BST中删除节点。删除节点较为复杂，很多情况需要考虑。
+在 part2的文章中，我们将讨论从BST中删除节点。删除节点较为复杂，很多因素需要考虑。
