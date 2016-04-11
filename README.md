@@ -20,7 +20,7 @@ Oct 2, 2012<br/>
 Sep 17, 2012<br/>
 [Computer science in JavaScript: Base64 编码](https://github.com/HelloLeeChan/CS-in-JavaScript-by-nzakes/blob/master/base64%E7%BC%96%E7%A0%81.md)<br/>
 Dec 8, 2009<br/>
-Computer science in JavaScript: Selection sort<br/>
+[Computer science in JavaScript: 选择排序](https://github.com/HelloLeeChan/CS-in-JavaScript-by-nzakes/blob/master/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.md)<br/>
 Sep 8, 2009<br/>
 Computer science in JavaScript: Binary search<br/>
 Sep 1, 2009<br/>
