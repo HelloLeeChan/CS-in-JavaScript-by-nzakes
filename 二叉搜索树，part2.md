@@ -119,7 +119,7 @@
                         if (current.value < parent.value){
                             parent.left = null;
 
-    //如果当前节点大于父节点，父节点指向null或者被删除节点的右节点                                               
+    			//如果当前节点大于父节点，父节点指向null或者被删除节点的右节点                                               
     			} else {
         			 parent.right = null;
                         	}
