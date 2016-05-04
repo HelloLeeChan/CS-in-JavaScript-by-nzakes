@@ -26,7 +26,7 @@ Computer science in JavaScript: Binary search<br/>
 Sep 1, 2009<br/>
 Computer science in JavaScript: Credit card number validation<br/>
 Aug 4, 2009<br/>
-[Computer science in JavaScript: 二叉搜索树, Part 2](https://github.com/HelloLeeChan/CS-in-JavaScript-by-nzakes/blob/master/%E6%90%9C%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8Cpart2.md)<br/>
+[Computer science in JavaScript: 二叉搜索树, Part 2](https://github.com/HelloLeeChan/CS-in-JavaScript-by-nzakes/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%EF%BC%8Cpart2.md)<br/>
 Jun 16, 2009<br/>
 [Computer science in JavaScript: 二叉搜索树, Part 1](https://github.com/HelloLeeChan/CS-in-JavaScript-by-nzakes/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%2C%20Part1.md)<br/>
 Jun 9, 2009<br/>
