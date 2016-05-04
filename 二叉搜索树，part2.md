@@ -85,7 +85,7 @@
                          (current.right !== null ? 1 : 0);
 
             //特殊情况，该节点是根节点
-    if (current === this._root){
+    	if (current === this._root){
                 switch(childCount){
 
                     //没有子节点，直接删除                   
@@ -109,7 +109,7 @@
                 }        
 
             //不存在根节点
-            } else {
+        } else {
 
                 switch (childCount){
 
