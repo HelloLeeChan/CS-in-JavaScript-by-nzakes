@@ -113,7 +113,8 @@
 
                 switch (childCount){
 
-                    //不存在子节点，直接从父节点删除                    case 0:
+                    //不存在子节点，直接从父节点删除                    
+                    case 0:
                         //如果当前节点小于其父节点，父节点指向null或者被删除节点的左节点                      
                         if (current.value < parent.value){
                             parent.left = null;
@@ -220,7 +221,8 @@
                             replacement.left = this._root.left;
                         } else {
 
-                            //分配子节点                            replacement.right = this._root.right;
+                            //分配子节点                            
+                            replacement.right = this._root.right;
                         }
 
                         //officially assign new root
