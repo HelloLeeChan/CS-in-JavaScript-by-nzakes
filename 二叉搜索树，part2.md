@@ -88,16 +88,19 @@
     if (current === this._root){
                 switch(childCount){
 
-                    //没有子节点，直接删除                    case 0:
+                    //没有子节点，直接删除                   
+                    case 0:
                         this._root = null;
                         break;
 
-                    //存在一个子节点                                        case 1:
+                    //存在一个子节点                                       
+                    case 1:
                         this._root = (current.right === null ? 
                                       current.left : current.right);
                         break;
 
-                      //两个子节点，略复杂                    case 2:
+                      //两个子节点，略复杂                    
+                      case 2:
 
                         //TODO
 
@@ -115,23 +118,28 @@
                         if (current.value < parent.value){
                             parent.left = null;
 
-    //如果当前节点大于父节点，父节点指向null或者被删除节点的右节点                                               } else {
-             parent.right = null;
-                        }
-                        break;
+    //如果当前节点大于父节点，父节点指向null或者被删除节点的右节点                                               
+    			} else {
+        			 parent.right = null;
+                        	}
+                        	break;
 
-                    //一个子节点的情况下只需重置父节点                    case 1:
-                        //如果当前节点小于父节点，重置其左指针                        if (current.value < parent.value){
+                    //一个子节点的情况下只需重置父节点                    
+                    case 1:
+                        //如果当前节点小于父节点，重置其左指针                        
+                        if (current.value < parent.value){
                             parent.left = (current.left === null ? 
                                            current.right : current.left);
 
-                        //如果当前节点大于父节点，则重置其右指针                        } else {
+                        //如果当前节点大于父节点，则重置其右指针                        
+                        } else {
                             parent.right = (current.left === null ? 
                                             current.right : current.left);
                         }
                         break;    
 
-                    //两个子节点的情况下需要更多操作                    case 2:
+                    //两个子节点的情况下需要更多操作                    
+                    case 2:
 
                         //TODO          
 
