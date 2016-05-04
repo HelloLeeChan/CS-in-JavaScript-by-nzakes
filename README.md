@@ -8,7 +8,7 @@
 
 该系列共12篇博客，
 主要用JS描述一些经典算法和数据结构， Nicolas也是我非常喜欢的前端大神(JS高级程序设计的作者)，
-打算每个星期翻一篇，希望能在春节前后做完。
+因为各种琐事，翻译进度一直很慢， 之前说的一周一篇怕是太懒做不到了， 希望这两月尽快翻完吧。
 
 
 文章列表[Computer Science](https://www.nczonline.net/blog/tag/computer-science/) <br/>
