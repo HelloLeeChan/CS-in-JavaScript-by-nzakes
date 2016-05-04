@@ -75,7 +75,7 @@
             replacement,
             replacementParent;
 
-        //find the node (removed for space)
+        //找到节点
 
         //只处理存在的节点
         if (found){
@@ -172,30 +172,30 @@
             replacement,
             replacementParent;
 
-        //find the node (removed for space)
+        //找到节点
 
-        //only proceed if the node was found
+        //只处理存在的节点
         if (found){
 
-            //figure out how many children
+            //计算子节点数量
             childCount = (current.left !== null ? 1 : 0) + 
                          (current.right !== null ? 1 : 0);
 
-            //special case: the value is at the root
+            //处理根节点
             if (current === this._root){
                 switch(childCount){
 
-                    //other cases removed to save space
+                    //其他情况
 
-                    //two children, little work to do
+                    //两个子节点的情况下更复杂
                     case 2:
 
-                        //new root will be the old root's left child
+                        //新的根节点是原根节点的左子节点
                         //...maybe
                         replacement = this._root.left;
 
-                        //find the right-most leaf node to be 
-                        //the real new root
+                        //找到最右节点
+                        //新的根节点
                         while (replacement.right !== null){
                             replacementParent = replacement;
                             replacement = replacement.right;
@@ -204,18 +204,15 @@
                         //it's not the first node on the left
                         if (replacementParent !== null){
 
-                            //remove the new root from it's 
-                            //previous position
+                            //从其之前的位置删除
                             replacementParent.right = replacement.left;
 
-                            //give the new root all of the old 
-                            //root's children
+                            //为新的跟节点设置子节点
                             replacement.right = this._root.right;
                             replacement.left = this._root.left;
                         } else {
 
-                            //just assign the children
-                            replacement.right = this._root.right;
+                            //分配子节点                            replacement.right = this._root.right;
                         }
 
                         //officially assign new root
@@ -225,21 +222,21 @@
 
                 }        
 
-            //non-root values
+            //非根节点的处理
             } else {
 
                 switch (childCount){
 
-                    //other cases removed to save space 
+                    //其他情况
 
-                    //two children, a bit more complicated
+                    //删除包含两个子节点的节点的情况最为复杂
                     case 2:
 
-                        //reset pointers for new traversal
+                        //重置指针，为遍历做准备
                         replacement = current.left;
                         replacementParent = current;
 
-                        //find the right-most node
+                        //找出最右节点
                         while(replacement.right !== null){
                             replacementParent = replacement;
                             replacement = replacement.right;
@@ -247,11 +244,11 @@
 
                         replacementParent.right = replacement.left;
 
-                        //assign children to the replacement
+                        //为替换节点分配节点
                         replacement.right = current.right;
                         replacement.left = current.left;
 
-                        //place the replacement in the right spot
+                        //正确安插替换节点
                         if (current.value < parent.value){
                             parent.left = replacement;
                         } else {
