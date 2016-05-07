@@ -281,6 +281,6 @@
 
 以上代码对于包含两个子节点的根节点与非根节点的处理方式几乎是一样的。 其逻辑就是每次都寻找直接前驱(左子树中最右的节点)。在`while`循环中用到了`replacement`和`replacementParent`两个变量。替换节点`replacement`将会取代`current`的位置，`replacement`将从其原来的位置上移除，同时这里需要重新设置其原父节点的`right`指针到它的`left`指针上。对于根节点的处理，因为`replacementParent`是`null`，且替代节点(replacement)是根节点的直接子节点，所以直接将`replacement`的`right`节点设置为根节点的右节点。最后一步是把替代节点安插到正确的位置。 对于删除根节点，替换节点被设置为新的根节点，对于删除非根节点， 替换节点被安插到合适位置。
 
-这里需要注意的是： 在大部分值在树的的一侧的BST中，总是使用直接前驱替换节点会导致二叉树的不平衡， 不平衡二叉树将导致搜索效率降低， 并且会影响实际中的应用。 有些BST的会判断到底是使用直接前驱还是直接后继作为替换节点来保证BST的平衡(比如所谓的自平衡BST)
+这里需要注意的是： 在大部分值在树一侧的BST中，总是使用直接前驱替换节点会导致二叉树的不平衡， 不平衡二叉树将导致搜索效率降低， 并且会影响实际中的应用。 有些BST的会判断到底是使用直接前驱还是直接后继作为替换节点来保证BST的平衡(比如所谓的自平衡BST)
 
 关于二叉搜索树的源码可以从我的github下载[Computer Science in JavaScript GitHub project](https://github.com/nzakas/computer-science-in-javascript/) 你也可以看看[Isaac Schlueter](http://foohack.com/)的二叉树实现[GitHub fork](https://github.com/isaacs/computer-science-in-javascript/)
