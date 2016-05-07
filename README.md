@@ -22,7 +22,7 @@ Sep 17, 2012<br/>
 Dec 8, 2009<br/>
 [Computer science in JavaScript: 选择排序](https://github.com/HelloLeeChan/CS-in-JavaScript-by-nzakes/blob/master/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.md)<br/>
 Sep 8, 2009<br/>
-Computer science in JavaScript: Binary search<br/>
+[Computer science in JavaScript: 二分法搜索](https://github.com/HelloLeeChan/CS-in-JavaScript-by-nzakes/blob/master/%E4%BA%8C%E5%88%86%E6%B3%95%E6%90%9C%E7%B4%A2.md)<br/>
 Sep 1, 2009<br/>
 Computer science in JavaScript: Credit card number validation<br/>
 Aug 4, 2009<br/>
