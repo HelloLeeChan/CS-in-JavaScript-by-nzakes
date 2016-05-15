@@ -34,7 +34,7 @@ Jun 9, 2009<br/>
 May 26, 2009<br/>
 Computer science in JavaScript: Doubly-linked lists<br/>
 Apr 21, 2009<br/>
-Computer science in JavaScript: Linked list<br/>
+[Computer science in JavaScript: 链表](https://github.com/HelloLeeChan/CS-in-JavaScript-by-nzakes/blob/master/%E9%93%BE%E8%A1%A8.md)<br/>
 Apr 13, 2009<br/>
 
 
